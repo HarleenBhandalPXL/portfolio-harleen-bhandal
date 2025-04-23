@@ -17,4 +17,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom right, #3b82f6, #6366f1) fixed;
+  margin: 0;
+  padding: 0;
 }
