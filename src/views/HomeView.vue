@@ -9,7 +9,7 @@
 
 <template>
   <section
-      class="flex flex-col items-center justify-center text-center h-screen text-white px-4"
+      class="flex flex-col items-center justify-center text-center md:text-left h-screen text-white px-4"
   >
     <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
       Ik ben Harleen Bhandal
@@ -47,8 +47,21 @@
       Over mij
     </h1>
     <p class="text-xl md:text-2xl font-light opacity-80">
-
+      Mijn naam is Harleen Bhandal en ik ben 20 jaar oud. Ik studeer Toegepaste Informatica met een specialisatie in applicatieontwikkeling. Wat mij typeert is mijn brede interesse in zowel de auto-industrie als softwareontwikkeling. Dit zijn twee domeinen die elkaar steeds meer raken door technologische innovatie.
+      <br />
+      <br />
+      Ik beschouw mezelf als een meewerkend teamlid dat pragmatisch te werk gaat. In projecten focus ik me graag op concrete resultaten. Hoewel ik eerder afstandelijk overkom, ben ik betrouwbaar en doelgericht in mijn samenwerking met anderen.
+      <br />
+      <br />
+      Mijn ambitie is om software te ontwikkelen binnen de auto-industrie bijvoorbeeld voor infotainmentsystemen, rijhulpsystemen of voertuigcommunicatie. Om die ambitie waar te maken wil ik graag Duits leren, aangezien het een belangrijke taal is binnen de Europese auto-industrie.
     </p>
+    <RouterLink
+        to="/projects"
+        class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30
+               px-6 py-3 rounded-full font-semibold transition text-black mt-20"
+    >
+      Bekijk mijn activiteiten
+    </RouterLink>
   </section>
 </template>
 <style scoped>
