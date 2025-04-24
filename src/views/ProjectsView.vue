@@ -3,6 +3,7 @@
   import hackathon1 from '@/assets/hackathon_1.jpg';
   import hackathon2 from '@/assets/hackathon_2.png';
   import hackathon3 from '@/assets/hackathon_3.jpg';
+  import xFactorImage from "@/assets/x-factor.jpg";
 
   function scrollToHackathon() {
     const hackathonSection = document.getElementById("hackathon");
@@ -125,6 +126,14 @@
     showModalStudyTrip.value = false;
   }
 
+  const showModalFinalReflection = ref(false);
+  function openModalFinalReflection() {
+    showModalFinalReflection.value = true;
+  }
+  function closeModalFinalReflection() {
+    showModalFinalReflection.value = false;
+  }
+
   const studyTripParagraphs = ref<Day[]>([
     {
       title: 'Ars Electronic Center',
@@ -186,7 +195,7 @@
           px-6 py-3 rounded-full font-semibold transition text-black"
           @click="openModalInnovation"
       >
-        Lees heel mijn verslag
+        Lees mijn volledig verslag
       </button>
       <button
           @click="scrollToHackathon"
@@ -304,7 +313,7 @@
             px-6 py-3 rounded-full font-semibold transition text-black"
           @click="openModalHackathon"
       >
-        Lees heel mijn verslag
+        Lees mijn volledig verslag
       </button>
       <button @click="scrollToStudyTrip" class="mt-6 border-2 border-white border-opacity-50 hover:border-blue-500 hover:bg-white hover:text-black px-6 py-3 rounded-full font-semibold transition">
         Studiereis: Linz
@@ -408,7 +417,7 @@
           px-6 py-3 rounded-full font-semibold transition text-black"
           @click="openModalStudyTrip"
       >
-        Lees heel mijn verslag
+        Lees mijn volledig verslag
       </button>
       <button
           @click="scrollToFinalReflection"
@@ -478,8 +487,112 @@
            h-screen bg-gradient-to-br
            text-white px-4 max-w-7xl mx-auto"
   >
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+      Eindreflectie:
+    </h1>
 
+    <div class="max-w-3xl mx-auto space-y-4 text-black mt-8">
+      <details
+          class="bg-white/80 bg-opacity-10 p-6 rounded-2xl shadow-lg backdrop-blur-md"
+      >
+        <summary class="cursor-pointer text-2xl font-semibold">
+          (Em)passie
+        </summary>
+        <div class="mt-4 text-left text-black whitespace-pre-line">
+          Mijn persoonlijke doelstelling voor de innovatieroute was om meer inzicht te krijgen in prompt engineering en de werking van AI-assistenten zoals Joule. Dat doel is zeker behaald. Ik heb geleerd hoe belangrijk het is om bij het werken met AI concreet en contextueel te communiceren. Een kleine aanpassing in een prompt kan een compleet ander resultaat opleveren. Dat besef gaf me niet enkel een beter begrip van de technologie zelf, maar ook van het belang van duidelijke communicatie. Dit is een vaardigheid die ook buiten AI-toepassingen essentieel is. Deze ervaring weerspiegelt mijn (em)passie voor technologie en mijn wil om continu bij te leren.
+        </div>
+      </details>
+      <details
+          class="bg-white/80 bg-opacity-10 p-6 rounded-2xl shadow-lg backdrop-blur-md"
+      >
+        <summary class="cursor-pointer text-2xl font-semibold">
+          Ondernemend en innovatief
+        </summary>
+        <div class="mt-4 text-left text-black whitespace-pre-line">
+          De hackathon was voor mij een voorbeeld van ondernemerschap. Onder tijdsdruk moesten we snel beslissen, experimenteren en keuzes maken. Dit vereiste dat we durfden proberen, leerden uit onze fouten en bleven doorzetten. Zelfs wanneer de oplossing niet meteen duidelijk was. Zo ontdekten we tijdens één van de challenges toevallig dat de API werkte met een gelimiteerd aantal vragen, wat ons de kans gaf om strategisch te handelen. In plaats van vast te blijven hangen in één aanpak, pasten we ons aan en benutten we die ontdekking om de uitdaging succesvol af te ronden. Deze ervaring leerde me dat ondernemerschap niet alleen draait om het hebben van een goed idee, maar vooral om snel schakelen, risico’s nemen en doorzetten wanneer het moeilijk wordt. Het was bijzonder verrijkend om dit soort vaardigheden te oefenen in een competitieve en realistische context.
+        </div>
+      </details>
+      <details
+          class="bg-white/80 bg-opacity-10 p-6 rounded-2xl shadow-lg backdrop-blur-md"
+      >
+        <summary class="cursor-pointer text-2xl font-semibold">
+          Multi- & disciplinariteit
+        </summary>
+        <div class="mt-4 text-left text-black whitespace-pre-line">
+          De studiereis naar Linz heeft mijn blik op technologie en maatschappij verder verruimd. Vooral het bezoek aan het Ars Electronica Center was indrukwekkend. De projecten daar toonden op een inspirerende manier hoe technologie kan samenwerken met kunst om maatschappelijke thema’s zoals klimaatverandering aan te kaarten. Deze multidisciplinaire aanpak zette me aan het denken over mijn eigen rol als toekomstige ontwikkelaar. Het maakte me bewust dat technologie niet alleen over efficiëntie en functionaliteit gaat, maar ook over ethiek, creativiteit en verantwoordelijkheid. Dit sluit naadloos aan bij het X-factor element multidisciplinariteit.
+        </div>
+      </details>
+      <details
+          class="bg-white/80 bg-opacity-10 p-6 rounded-2xl shadow-lg backdrop-blur-md"
+      >
+        <summary class="cursor-pointer text-2xl font-semibold">
+          (Internationaal)samen(net)werking
+        </summary>
+        <div class="mt-4 text-left text-black whitespace-pre-line">
+          Verder bood de studiereis mij ook de kans om in contact te komen met een andere onderwijsinstelling. Namelijk de campus Hagenberg van de FH OÖ. Ik ontdekte hoe onderwijs daar op projectmatige wijze wordt samengesteld. De gesprekken met lokale bewoners en de gezamenlijke belevingen binnen onze groep versterkten mijn gevoel voor (inter)nationale samenwerking. Het stimuleerde me om mijn comfortzone te verlaten en open te staan voor nieuwe perspectieven.
+        </div>
+      </details>
+    </div>
+    <img
+        :src="xFactorImage"
+        alt="X-Factor"
+        class="w-1/2 h-auto rounded-lg shadow-lg transform transition-transform duration-200 hover:scale-105 cursor-pointer mb-8 mt-8"
+        @click="openImagePreview(xFactorImage)"
+    />
+    <div class="mt-8 space-x-4">
+      <button
+          class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30
+          px-6 py-3 mb-8 rounded-full font-semibold transition text-black"
+          @click="openModalFinalReflection"
+      >
+        Lees mijn volledige eindreflectie
+      </button>
+    </div>
   </section>
+  <transition
+      enter-active-class="transition-opacity duration-300"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="transition-opacity duration-300"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
+  >
+    <div
+        v-if="showModalFinalReflection"
+        class="fixed inset-0 bg-black/80 bg-opacity-50 flex items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-2xl w-11/12 md:w-3/4 lg:w-1/2 max-h-[80vh] overflow-y-auto p-6 relative">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 absolute top-4 right-4 text-red-500 hover:text-red-700"
+             @click="closeModalFinalReflection">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+        <h2 class="text-3xl font-bold mb-4">Eindreflectie</h2>
+        <div class="space-y-4 text-left text-gray-800">
+          <p>
+            De voorbije periode heb ik via verschillende unieke leerervaringen kunnen groeien als student en als toekomstig IT-professional. Dankzij de innovatieroute rond generatieve AI, de deelname aan de HackTheFuture-hackathon en de studiereis naar Linz heb ik niet alleen technische vaardigheden aangescherpt, maar ook mijn visie op technologie, samenwerking en maatschappelijke impact verbreed. Deze trajecten sluiten sterk aan bij de X-factor van PXL, namelijk (em)passie, ondernemerschap, innovatie, (inter)nationale samenwerking en multidisciplinariteit.
+          </p>
+          <p>
+            Mijn persoonlijke doelstelling voor de innovatieroute was om meer inzicht te krijgen in prompt engineering en de werking van AI-assistenten zoals Joule. Dat doel is zeker behaald. Ik heb geleerd hoe belangrijk het is om bij het werken met AI concreet en contextueel te communiceren. Een kleine aanpassing in een prompt kan een compleet ander resultaat opleveren. Dat besef gaf me niet enkel een beter begrip van de technologie zelf, maar ook van het belang van duidelijke communicatie. Dit is een vaardigheid die ook buiten AI-toepassingen essentieel is. Deze ervaring weerspiegelt mijn (em)passie voor technologie en mijn wil om continu bij te leren.
+          </p>
+          <p>
+            De hackathon was voor mij een voorbeeld van ondernemerschap. Onder tijdsdruk moesten we snel beslissen, experimenteren en keuzes maken. Dit vereiste dat we durfden proberen, leerden uit onze fouten en bleven doorzetten. Zelfs wanneer de oplossing niet meteen duidelijk was. Zo ontdekten we tijdens één van de challenges toevallig dat de API werkte met een gelimiteerd aantal vragen, wat ons de kans gaf om strategisch te handelen. In plaats van vast te blijven hangen in één aanpak, pasten we ons aan en benutten we die ontdekking om de uitdaging succesvol af te ronden. Deze ervaring leerde me dat ondernemerschap niet alleen draait om het hebben van een goed idee, maar vooral om snel schakelen, risico’s nemen en doorzetten wanneer het moeilijk wordt. Het was bijzonder verrijkend om dit soort vaardigheden te oefenen in een competitieve en realistische context.
+          </p>
+          <p>
+            De studiereis naar Linz heeft mijn blik op technologie en maatschappij verder verruimd. Vooral het bezoek aan het Ars Electronica Center was indrukwekkend. De projecten daar toonden op een inspirerende manier hoe technologie kan samenwerken met kunst om maatschappelijke thema’s zoals klimaatverandering aan te kaarten. Deze multidisciplinaire aanpak zette me aan het denken over mijn eigen rol als toekomstige ontwikkelaar. Het maakte me bewust dat technologie niet alleen over efficiëntie en functionaliteit gaat, maar ook over ethiek, creativiteit en verantwoordelijkheid. Dit sluit naadloos aan bij het X-factor element multidisciplinariteit.
+          </p>
+          <p>
+            Verder bood de studiereis mij ook de kans om in contact te komen met een andere onderwijsinstelling. Namelijk de campus Hagenberg van de FH OÖ. Ik ontdekte hoe onderwijs daar op projectmatige wijze wordt samengesteld. De gesprekken met lokale bewoners en de gezamenlijke belevingen binnen onze groep versterkten mijn gevoel voor (inter)nationale samenwerking. Het stimuleerde me om mijn comfortzone te verlaten en open te staan voor nieuwe perspectieven.
+          </p>
+          <p>
+            Als ik terugblik ben ik ervan overtuigd dat ik sterker uit deze periode ben gekomen. Ik heb geleerd hoe belangrijk het is om flexibel te denken, snel te schakelen, kritisch te zijn voor je eigen werk en te leren van anderen. Ik zie mezelf nu als een student met meer maturiteit, technische kennis en communicatieve vaardigheden. Ik ben nu iemand die durft te experimenteren en te groeien.
+          </p>
+          <p>
+            In de toekomst wil ik zeker nog Duits leren, aangezien dit mijn kansen op een job bij een bedrijf als Audi aanzienlijk kan vergroten. Door de taal te beheersen kan ik niet alleen beter communiceren in een internationale werkomgeving, maar toon ik ook mijn bereidheid om mij verder te ontwikkelen en open te staan voor opportuniteiten in het buitenland.
+          </p>
+        </div>
+      </div>
+    </div>
+  </transition>
 </template>
 
 <style scoped>
