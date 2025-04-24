@@ -41,8 +41,13 @@
       id="about-me"
       class="flex flex-col items-center justify-center text-center
            h-screen bg-gradient-to-br
-           text-white px-4"
+           text-white px-4 max-w-7xl mx-auto"
   >
+    <img
+        src="@/assets/harleen.jpg"
+        alt="Foto van Harleen Bhandal"
+        class="w-40 h-40 rounded-full mb-6"
+    />
     <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
       Over mij
     </h1>
